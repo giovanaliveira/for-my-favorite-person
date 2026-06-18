@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title> Para sempre você... ♡</title>
+<title>nosso lugar ♡</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
@@ -78,16 +78,25 @@ header h1 {
   margin-bottom: 15px;
 }
 
+/* BOTÕES DE MÚSICA (NOVO ESTILO) */
 .music a {
   display: block;
   text-decoration: none;
-  color: #333;
-  margin-bottom: 8px;
-  transition: 0.2s;
+  background: #111;          /* preto */
+  color: #fff;               /* texto branco */
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 12px;       /* borda arredondada */
+  font-size: 14px;
+  transition: 0.25s ease;
+  width: fit-content;
+  min-width: 280px;
 }
 
+/* HOVER BONITO */
 .music a:hover {
-  opacity: 0.5;
+  background: #333;
+  transform: translateY(-2px);
 }
 
 /* TEXTO AMOR */
@@ -98,26 +107,7 @@ header h1 {
   border-radius: 20px;
   line-height: 1.6;
   box-shadow: 0 8px 25px rgba(0,0,0,0.04);
-}
-
-/* BOTÃO */
-.btn {
-  margin: 50px auto;
-  display: block;
-  padding: 14px 40px;
-  border-radius: 30px;
-  border: none;
-  background: #111;
-  color: white;
-  cursor: pointer;
-}
-
-/* MOTIVOS */
-.motivos {
-  display: none;
-  max-width: 700px;
-  margin: auto;
-  padding: 20px;
+  white-space: pre-line;
 }
 
 /* FOOTER */
@@ -153,6 +143,11 @@ footer {
   .hero-text p {
     text-align: center;
   }
+
+  .music a {
+    width: 100%;
+    text-align: center;
+  }
 }
 </style>
 </head>
@@ -160,19 +155,17 @@ footer {
 <body>
 
 <header>
-  <h1> Lembre-se: você é incrivel ♡</h1>
+  <h1>nosso lugar ♡</h1>
 </header>
 
 <div class="container">
 
   <section class="hero">
 
-    <!-- IMAGEM (TOPO / ESQUERDA) -->
     <div class="image-box">
       <img src="https://i.postimg.cc/DZrsQ404/IMG-1878.jpg">
     </div>
 
-    <!-- TEXTO + MÚSICAS -->
     <div>
       <div class="hero-text">
         <h2>i just wanna be yours ♡</h2>
@@ -190,24 +183,8 @@ footer {
       </div>
 
       <div class="love-text">
-        Eu te amo. Muito. E às vezes eu fico até boba pensando em como você consegue me fazer bem sem nem perceber. Tem dias que parece que tudo fica mais leve só de você estar ali, só de você falar comigo, só de você existir na minha vida.
-
-E eu queria tanto conseguir te fazer sentir pelo menos um pouquinho do que você me faz sentir. Queria te ver feliz de verdade, sabe? Em paz com você mesmo, com esse sorriso que eu amo e com essa forma única que você tem.
-
-Eu acho você tão suficiente… de verdade mesmo. Você não precisa ser mais nada além do que já é. Mesmo quando você não se vê assim, eu vejo. E pra mim você já é incrível exatamente do seu jeito.
-
-E eu amo tanto observar você com a sua família… sério. Você como irmão é tão cuidadoso, tão presente… dá pra ver o quanto sua irmã te ama, e o quanto você também ama ela. É uma relação tão linda, tão verdadeira, que dá até um quentinho no coração de ver.
-
-E como filho então… você é incrível. De verdade. Você é responsável, tem um coração bom, se importa, se dedica… qualquer pai teria orgulho de ter um filho como você.
-
-No fim, eu só queria que você lembrasse disso quando estiver meio pra baixo: você é amado, você é importante, e você é suficiente.
-
-E eu te amo… do meu jeitinho meio bagunçado, meio sem explicação, mas totalmente sincero.<br><br>
-
-        Com você, eu posso ser eu mesma,
-        sem medo, sem filtros.<br><br>
-
-        Eu te amo mais do que palavras conseguem dizer.
+        <!-- SEU TEXTO AQUI -->
+        Eu te amo. Muito. E às vezes eu fico até boba pensando em como você consegue me fazer bem sem nem perceber...
       </div>
     </div>
 
@@ -215,34 +192,9 @@ E eu te amo… do meu jeitinho meio bagunçado, meio sem explicação, mas total
 
 </div>
 
-<button class="btn" onclick="mostrarMotivos()">CLIQUE AQUI</button>
-
-<div class="motivos" id="motivos">
-  <h3>100 motivos pra te amar ♡</h3>
-  <ul id="lista"></ul>
-</div>
-
 <footer>
   feito com todo meu amor, pra você ♡
 </footer>
-
-<script>
-function mostrarMotivos() {
-  const lista = document.getElementById("lista");
-  const div = document.getElementById("motivos");
-
-  if (lista.innerHTML === "") {
-    for (let i = 1; i <= 100; i++) {
-      let li = document.createElement("li");
-      li.textContent = "Motivo " + i + ": porque eu te amo 💙";
-      lista.appendChild(li);
-    }
-  }
-
-  div.style.display = "block";
-  div.scrollIntoView({ behavior: "smooth" });
-}
-</script>
 
 </body>
 </html>
